@@ -5,6 +5,7 @@ import bcrypt from "bcrypt";
 import registerRouter from "./routes/registerRoute.js";
 import alertRouter from "./routes/alertRoute.js";
 import loginRouter from "./routes/loginRoute.js";
+import priceRouter from './routes/priceRoute.js';
 
 
 const app = express();
@@ -28,3 +29,4 @@ mongoose
 app.use('/register', registerRouter);
 app.use("/login", loginRouter);
 app.use('/alert',alertRouter);
+app.use('/currentprice',priceRouter);
